@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6250" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="addLedCell" id="KGk-i7-Jjw" customClass="AddLedCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ID" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="evR-Mv-1r1">
+                        <rect key="frame" x="8" y="11" width="42" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="42" id="uM7-h1-BEc"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="description" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rAD-NT-K3Y">
+                        <rect key="frame" x="112" y="7" width="97" height="30"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <textInputTraits key="textInputTraits" keyboardType="alphabet"/>
+                    </textField>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XCo-dV-ns6">
+                        <rect key="frame" x="266" y="7" width="46" height="30"/>
+                        <state key="normal" title="Claim">
+                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                        <connections>
+                            <action selector="clickClaim:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="6da-Rs-uDB"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="evR-Mv-1r1" firstAttribute="baseline" secondItem="XCo-dV-ns6" secondAttribute="baseline" id="4Ka-ev-B54"/>
+                    <constraint firstItem="rAD-NT-K3Y" firstAttribute="leading" secondItem="evR-Mv-1r1" secondAttribute="trailing" constant="62" id="9O0-bZ-gmV"/>
+                    <constraint firstItem="XCo-dV-ns6" firstAttribute="top" secondItem="rAD-NT-K3Y" secondAttribute="top" id="DiL-8m-kUH"/>
+                    <constraint firstItem="XCo-dV-ns6" firstAttribute="leading" secondItem="rAD-NT-K3Y" secondAttribute="trailing" constant="57" id="G5d-L6-3ng"/>
+                    <constraint firstItem="evR-Mv-1r1" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="I6N-T5-V2Q"/>
+                    <constraint firstItem="rAD-NT-K3Y" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="Zwz-ZS-o8R"/>
+                    <constraint firstItem="evR-Mv-1r1" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="lTr-9u-t7C"/>
+                    <constraint firstItem="XCo-dV-ns6" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="rzK-1M-Mfr"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="btnClaim" destination="XCo-dV-ns6" id="XOy-Gd-fgK"/>
+                <outlet property="ledDescription" destination="rAD-NT-K3Y" id="MI6-b8-sqe"/>
+                <outlet property="ledID" destination="evR-Mv-1r1" id="b0i-GQ-nSv"/>
+            </connections>
+            <point key="canvasLocation" x="282" y="191"/>
+        </tableViewCell>
+    </objects>
+</document>
