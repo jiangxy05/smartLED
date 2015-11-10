@@ -17,9 +17,6 @@
 {
     id <AddLedCellDelegate> delegate;}
 @property (weak, nonatomic) IBOutlet UILabel *ledID;
-// for test only
-@property (weak, nonatomic) IBOutlet UILabel *test;
-
 
 @property (weak, nonatomic) IBOutlet UITextField *ledDescription;
 @property (weak, nonatomic) IBOutlet UIButton *btnClaim;
